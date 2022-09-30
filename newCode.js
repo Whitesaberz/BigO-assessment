@@ -5,7 +5,7 @@ let arr = [1, 2, 3, -3];
 const addToZero = (arr) => {
   let result = false;
   for (let i = 0; i < arr.length; i++) {
-    for (let u = 0; u < arr.length; u++) {
+    for (let u = i + 1; u < arr.length; u++) {
       if (arr[i] + arr[u] === 0) {
         let result = true;
         console.log(result);
@@ -20,7 +20,7 @@ perf.start();
 addToZero(arr);
 let resultsAddToZero = perf.stop();
 console.log("Add to Zero", resultsAddToZero.preciseWords);
-
+//Time Complexity Rating: O(n²)
 //Space Complexity Rating: O(n)
 
 //---------
@@ -42,7 +42,7 @@ perf.start();
 console.log(hasUniqueChars("Monday"));
 let resultsUniqueChars = perf.stop();
 console.log("Has Unique Chars", resultsUniqueChars.preciseWords);
-
+//Time Complexity Rating: O(n²)
 //Space Complexity Rating: O(n)
 
 //---------
@@ -63,6 +63,8 @@ perf.start();
 console.log(hasAllLetters(text));
 let resultsAllLetters = perf.stop();
 console.log("Has All Letters", resultsAllLetters.preciseWords);
+
+//Time Complexity Rating: O(n)
 //Space Complexity Rating: O(n)
 
 //---------
@@ -85,4 +87,5 @@ console.log(findLongestWord(["hi", "hello", "howdy", "konnichiwa"]));
 let resultsLongestWord = perf.stop();
 console.log("Find Longest Word", resultsLongestWord.preciseWords);
 
+//Time Complexity Rating: O(n)
 //Space Complexity Rating: O(n)
